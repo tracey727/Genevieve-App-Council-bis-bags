@@ -1,0 +1,23 @@
+{
+  "root_index_html": true,
+  "root_styles_css": true,
+  "root_app_js": true,
+  "root_vercel_json": true,
+  "no_package_json": true,
+  "no_package_lock_json": true,
+  "no_node_modules": true,
+  "no_dist": true,
+  "html_references_styles": true,
+  "html_references_app": true,
+  "has_genevieve_tm": true,
+  "has_parkpost_tm": true,
+  "has_patent": true,
+  "has_log_render": true,
+  "has_add_log": true,
+  "has_dispense_listener": true,
+  "has_take_listener": true,
+  "has_reset_listener": true,
+  "has_clear_log": true,
+  "app_js_node_syntax_check_returncode": 0,
+  "app_js_node_syntax_check_stderr": ""
+}

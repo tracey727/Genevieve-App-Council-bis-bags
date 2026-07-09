@@ -1,0 +1,9 @@
+{
+  "name": "GENEVIEVE™ App PARKPOST™",
+  "short_name": "PARKPOST",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#d8f3e0",
+  "theme_color": "#042d1b",
+  "icons": []
+}

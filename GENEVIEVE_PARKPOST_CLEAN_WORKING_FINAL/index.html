@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#042d1b">
+  <title>GENEVIEVE™ App PARKPOST™</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="manifest" href="./manifest.webmanifest">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <section class="brand">
+        <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <div>
+          <h1>Genevieve App<sup>™</sup></h1>
+          <p><strong>PARKPOST<sup>™</sup></strong> Dispenser & Bin Telemetry Simulator</p>
+        </div>
+      </section>
+      <section class="patent">
+        <span>🛡️</span>
+        <b>Australian Patent<br>2024101062</b>
+      </section>
+    </header>
+
+    <main class="dashboard">
+      <section class="panel cartridgePanel">
+        <h2>Cartridge Magazine</h2>
+        <div id="cartridgeList"></div>
+        <button id="manageCartridges" class="outline" type="button">Manage / refill cartridges</button>
+      </section>
+
+      <section class="panel mechanismPanel">
+        <div class="titleRow">
+          <h2>Dispenser Mechanism</h2>
+          <span id="mechanismStatus" class="pill green">Ready</span>
+        </div>
+
+        <div class="machine" aria-label="Dispenser mechanism visual">
+          <div class="machineBox"></div>
+          <div class="rolls">
+            <span class="roll dog">🐶</span>
+            <span class="roll leaf">🍃</span>
+            <span class="roll hand">✋</span>
+          </div>
+          <div id="bagFeed" class="feed"></div>
+          <div class="roller rollerOne"></div>
+          <div class="roller rollerTwo"></div>
+          <div class="arm armOne"></div>
+          <div class="arm armTwo"></div>
+          <div class="blade"></div>
+          <div class="collectionBin">♻</div>
+          <p class="callout c1">Cartridge magazine</p>
+          <p class="callout c2">Indexing mechanism</p>
+          <p class="callout c3">Drive roller</p>
+          <p class="callout c4">Cutter blade</p>
+          <p class="callout c5">Collection bin</p>
+        </div>
+
+        <div id="machineFooter" class="statusLine green">
+          <b>System Status</b><span>All systems operational</span>
+        </div>
+      </section>
+
+      <aside class="rightColumn">
+        <section class="panel">
+          <h2>System Status</h2>
+          <div id="statusCard" class="statusCard green">
+            <span id="statusIcon">✓</span>
+            <div>
+              <b id="statusTitle">Ready to dispense</b>
+              <p id="statusMessage">Select quantity and press dispense</p>
+            </div>
+          </div>
+          <div class="sensorGrid">
+            <div><span>🌡️</span><b id="tempValue">23.4°C</b><small>Temperature</small></div>
+            <div><span>🔋</span><b id="batteryValue">96%</b><small>Battery</small></div>
+            <div><span>▮</span><b id="signalValue">4G</b><small>Signal</small></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Dispense Control</h2>
+          <label class="quantityLabel">Quantity</label>
+          <div class="quantityControl">
+            <button id="minusQty" type="button">−</button>
+            <div><b id="qtyValue">1</b><small id="qtyWord">Bag</small></div>
+            <button id="plusQty" type="button">+</button>
+          </div>
+          <button id="dispenseBtn" class="dispense" type="button">♻ Dispense</button>
+          <div class="buttonRow">
+            <button id="takeBtn" class="take" type="button">✋ Take</button>
+            <button id="resetBtn" class="outline" type="button">⟳ Reset</button>
+          </div>
+          <p id="lastAction" class="lastAction">Waiting for action.</p>
+        </section>
+
+        <section class="greenCard">
+          <span class="logo small" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <h2>Sustainable.<br>Reliable.<br>Smart.</h2>
+          <p>Smarter waste management for cleaner communities.</p>
+          <b>genevieveapp.com.au</b>
+        </section>
+      </aside>
+
+      <section class="metrics">
+        <article class="metric">
+          <div id="fillRing" class="ring"><span><b id="binFill">62%</b><small>Filled</small></span></div>
+          <h3>Bin Fill Level</h3>
+          <p id="fillLabel">Normal</p>
+        </article>
+        <article class="metric">
+          <div id="dispenseRing" class="ring"><span><b id="dispenseCount">1247</b><small>Today</small></span></div>
+          <h3>Dispense Count</h3>
+          <p id="dispenseTrend">+18% vs yesterday</p>
+        </article>
+        <article class="metric">
+          <div class="ring uptime"><span><b>98.7%</b><small>Uptime</small></span></div>
+          <h3>System Uptime</h3>
+          <p>Excellent</p>
+        </article>
+      </section>
+
+      <section class="panel logPanel">
+        <div class="titleRow">
+          <h2>System Log</h2>
+          <button id="clearLogBtn" class="textBtn" type="button">Clear log</button>
+        </div>
+        <div id="systemLog" class="systemLog"></div>
+      </section>
+
+      <section class="panel colourPanel">
+        <h2>Colour Options</h2>
+        <button class="swatch forest active" data-colour="forest" type="button">Forest Green</button>
+        <button class="swatch charcoal" data-colour="charcoal" type="button">Charcoal Grey</button>
+        <button class="swatch sandstone" data-colour="sandstone" type="button">Sandstone</button>
+      </section>
+    </main>
+
+    <footer>
+      <span class="logo small" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <b>Genevieve App<sup>™</sup></b>
+      <span>Real-time data. Automatic alerts. Cleaner communities.</span>
+      <small>GENEVIEVE™ App and PARKPOST™ are used as trademarks of the business owner.</small>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
