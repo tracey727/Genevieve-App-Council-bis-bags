@@ -2,7 +2,6 @@
   "root_index_html": true,
   "root_styles_css": true,
   "root_app_js": true,
-  "root_vercel_json": true,
   "no_package_json": true,
   "no_package_lock_json": true,
   "no_node_modules": true,
@@ -19,5 +18,8 @@
   "has_reset_listener": true,
   "has_clear_log": true,
   "app_js_node_syntax_check_returncode": 0,
-  "app_js_node_syntax_check_stderr": ""
+  "app_js_node_syntax_check_stderr": "",
+  "root_vercel_json": false,
+  "root_netlify_toml": false,
+  "cloudflare_pages_static": true
 }
