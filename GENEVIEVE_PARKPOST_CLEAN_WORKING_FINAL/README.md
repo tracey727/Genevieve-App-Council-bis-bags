@@ -1,24 +1,10 @@
 # GENEVIEVE™ App PARKPOST™
 
-Clean static deployable PARKPOST™ dispenser and bin telemetry simulator.
+Static PARKPOST™ dispenser and bin telemetry simulator.
 
-## Correct file layout
+## Repository status
 
-Upload these files at the root of the repo/project:
-
-```text
-index.html
-styles.css
-app.js
-manifest.webmanifest
-vercel.json
-netlify.toml
-_redirects
-README.md
-assets/
-```
-
-Do not upload the parent folder as an extra nested folder. `index.html` must be at the top level.
+This is a separate council bin/bag prototype. It is **not** the CLEAN-SAFE prototype and should not be merged into `Genevieve-Bins-v1.1`.
 
 ## What works
 
@@ -26,29 +12,23 @@ Do not upload the parent folder as an extra nested folder. `index.html` must be 
 - quantity plus/minus logs
 - dispense logs
 - take event logs
-- reset works
-- clear log works
+- reset and clear-log actions
 - cartridge refill logs
 - colour option logs
 - bin fill updates
 - dispense count updates
-- low stock / spent / full-bin status states
+- low-stock / spent / full-bin status states
 
-## Vercel settings
+## Cloudflare Pages
 
-- Framework Preset: Other
-- Install Command: blank
-- Build Command: blank
-- Output Directory: blank or `.`
-- Root Directory: `./`
+This is a static app with no npm/build dependency.
 
-## No build requirements
+Use the nested folder `GENEVIEVE_PARKPOST_CLEAN_WORKING_FINAL` as the Cloudflare Pages root, or move its contents into a dedicated canonical PARKPOST repository before production use.
 
-- no npm
-- no package.json
-- no package-lock.json
-- no node_modules
-- no dist
+- Framework preset: none / static HTML
+- Build command: leave blank
+- Output directory: repository root for the selected project folder
+- Keep `_redirects` for SPA fallback
 
 ## Trademark
 
